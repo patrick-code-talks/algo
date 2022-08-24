@@ -2,7 +2,7 @@ public class StringSum {
     public static void main(String[] args) {
         StringSum s = new StringSum();
 
-        String s1 = "1", s2 = "2", s3 = "102";
+        String s1 = "10534", s2 = "67", s3 = "1120";
         boolean result = s.solution(s1, s2, s3);
         System.out.println("result = " + result);
     }
@@ -32,7 +32,8 @@ public class StringSum {
         }
 
         for (int i = 0; i < first.length(); i++) {
-            String modified = first.substring(0, i) + first.substring(i);
+            String modified = first.substring(0, i) + first.substring(i + 1);
+
             if (modified.startsWith("0")) {
                 continue;
             }
